@@ -3,7 +3,6 @@ import { addProduct, deleteProductsById, getProducts, getProductsById, modificar
 import { generateMockMusicProducts } from '../middleware/mocking.js';
 
 const router = Router();
-
 router.get('/mockingproducts', (req, res) => {
     const mockProducts = generateMockMusicProducts(100);
     res.status(200).json(mockProducts);

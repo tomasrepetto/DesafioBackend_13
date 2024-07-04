@@ -1,3 +1,4 @@
+// src/app.js
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -103,6 +104,8 @@ try {
 } catch (error) {
     console.error('Error connecting to the database:', error);
 }
+
+
 
 
 
