@@ -14,7 +14,7 @@ export const getProductsController = async (req, res, next) => {
 export const addProductController = async (req, res, next) => {
     const { title, price, ...rest } = req.body;
     if (!title || !price) {
-        return next(new CustomError('MissingFieldsError', 'Título y precio son requeridos'));
+        return next(new CustomError('MissingFieldsError', 'Todos los campos son requeridos'));
     }
     try {
         const product = await productsServices.addProductService({ title, price, ...rest });
@@ -64,8 +64,6 @@ export const modificarProductsController = async (req, res, next) => {
     }
 };
 
-// Asegúrate de exportar todas las funciones necesarias
-export { getProductsController, addProductController, getProductsByIdController, deleteProductsByIdController, modificarProductsController };
 
 
 
